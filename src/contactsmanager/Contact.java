@@ -7,30 +7,30 @@
 package contactsmanager;
 
 public class Contact {
-    private String nama;
+    private String name;
     private String email;
-    private String noHP;
+    private String phoneNumber;
 
-    public Contact(String nama, String email, String noHP) {
-        this.nama = nama;
+    public Contact(String name, String email, String phoneNumber) {
+        this.name = name;
         this.email = email;
-        this.noHP = noHP;
+        this.phoneNumber = phoneNumber;
     }
     
-    public void setName(String nama) {
-        this.nama = nama;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setPhoneNumber(String noHP) {
-        this.noHP = noHP;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
     
     public String getName() {
-        return nama;
+        return name;
     }
 
     public String getEmail() {
@@ -38,6 +38,6 @@ public class Contact {
     }
 
     public String getPhoneNumber() {
-        return noHP;
+        return phoneNumber;
     }
 }
