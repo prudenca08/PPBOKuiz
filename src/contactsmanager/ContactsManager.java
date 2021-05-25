@@ -9,7 +9,7 @@ package contactsmanager;
 public class ContactsManager {
     private Contact [] myFriends;
     private int friendsCount = 0;
-    // Constructor
+  
     ContactsManager() {
         myFriends = new Contact[500];
     }
