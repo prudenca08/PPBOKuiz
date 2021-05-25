@@ -7,23 +7,23 @@
 package contactsmanager;
 
 public class ContactsManager {
-    private final Contact [] temanSaya;
-    private int temanCount = 0;
+    private Contact [] myFriends;
+    private int friendsCount = 0;
     // Constructor
     ContactsManager() {
-        temanSaya = new Contact[500];
+        myFriends = new Contact[500];
     }
     protected void addContact(Contact contact){
-        temanSaya[temanCount] = contact;
-        temanCount++;
+        myFriends[friendsCount] = contact;
+        friendsCount++;
     }
-    public Contact searchContact(String searchNama){
+    public Contact searchContact(String searchName){
         Contact result = new Contact(null, null, null);
-        for(int i = 0; i<temanCount; i++){
-            if(temanSaya[i].getName().equals(searchNama)){
-                result.setName(temanSaya[i].getName());
-                result.setEmail(temanSaya[i].getEmail());
-                result.setPhoneNumber(temanSaya[i].getPhoneNumber());
+        for(int i = 0; i<friendsCount; i++){
+            if(myFriends[i].getName().equals(searchName)){
+                result.setName(myFriends[i].getName());
+                result.setEmail(myFriends[i].getEmail());
+                result.setPhoneNumber(myFriends[i].getPhoneNumber());
             }
         }
         return result;
