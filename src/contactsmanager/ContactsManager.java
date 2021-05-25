@@ -11,7 +11,7 @@ public class ContactsManager {
     private int temanCount = 0;
     // Constructor
     ContactsManager() {
-        temanSaya = new Contact[200];
+        temanSaya = new Contact[500];
     }
     protected void addContact(Contact contact){
         temanSaya[temanCount] = contact;
