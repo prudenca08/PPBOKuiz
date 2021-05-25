@@ -10,9 +10,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
@@ -25,22 +22,22 @@ public class Main {
         myContactsManager.addContact(rio);
         Contact tita = new Contact("Anggitha Putri Rachmandini", "anggithaputr@gmail.com", "087746434344");
         myContactsManager.addContact(tita);
-
+        
         String isAgain = "y";
-        String searchNama;
+        String searchName;
         while("y".equals(isAgain)){
-            System.out.print("Cari Nama : ");
-            searchNama = input.nextLine();
-            System.out.println("Mencari....");
-            if(myContactsManager.searchContact(searchNama).getName() == null){
-                System.out.println(searchNama +"'s contact tidak ditemukan!");
+            System.out.print("Search Name : ");
+            searchName = input.nextLine();
+            System.out.println("Searching....");
+            if(myContactsManager.searchContact(searchName).getName() == null){
+                System.out.println(searchName +"'s Contact Not Found!");
             }
             else{
-                System.out.println("Nama     : "+myContactsManager.searchContact(searchNama).getName());
-                System.out.println("No HP    : "+myContactsManager.searchContact(searchNama).getPhoneNumber());
-                System.out.println("Email    : "+myContactsManager.searchContact(searchNama).getEmail());
+                System.out.println("Name     : "+myContactsManager.searchContact(searchName).getName());
+                System.out.println("Number   : "+myContactsManager.searchContact(searchName).getPhoneNumber());
+                System.out.println("Email    : "+myContactsManager.searchContact(searchName).getEmail());
             }
-            System.out.print("\nUlangi? (y/n) : ");
+            System.out.print("\nAgain? (y/n) : ");
             isAgain = input.nextLine();
         }
     }
